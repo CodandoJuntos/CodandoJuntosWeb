@@ -1,32 +1,72 @@
 <template>
   <div class="conteudo-cadastro">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <b-container fluid="xl">
+      <b-row>
+        <b-col cols="12" xl="4" lg="4" md="4" sm="12">
+          <div class="div-cadastro">
+            <b-container fluid="xl">
+              <b-row>
+                <b-col cols="12">
+                  <div class="header-form-cadastro">
+                    <h4>INSIRA SEUS DADOS PARA REALIZAR SEU CADASTRO</h4>
+                  </div>
+                  <div class="div-form-cadastro">
+                    <form>
+                      <b-row>
+                        <b-col cols="12">
+                          <b-input-group size="lg" class="mb-3">
+                            <b-input-group-prepend is-text>
+                              <b-icon scale="2" icon="person-fill"></b-icon>
+                            </b-input-group-prepend>
+                            <b-form-input type="text" placeholder="Nome completo"></b-form-input>
+                          </b-input-group>
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col cols="12">
+                          <b-input-group size="lg" class="mb-3">
+                            <b-input-group-prepend is-text>
+                              <b-icon scale="2" icon="envelope-fill"></b-icon>
+                            </b-input-group-prepend>
+                            <b-form-input type="text" placeholder="E-mail"></b-form-input>
+                          </b-input-group>
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col cols="12">
+                          <b-input-group size="lg" class="mb-2">
+                            <b-input-group-prepend is-text>
+                              <b-icon scale="2" icon="lock-fill"></b-icon>
+                            </b-input-group-prepend>
+                            <b-form-input type="password" placeholder="Senha"></b-form-input>
+                          </b-input-group>
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col cols="12">
+                          <b-input-group size="lg" class="mb-2">
+                            <b-input-group-prepend is-text>
+                              <b-icon scale="2" icon="lock-fill"></b-icon>
+                            </b-input-group-prepend>
+                            <b-form-input type="password" placeholder="Confirmar senha"></b-form-input>
+                          </b-input-group>
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col cols="12">
+                          <button class="botao-cadastro">Cadastrar-se</button>
+                        </b-col>
+                      </b-row>
+                    </form>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </div>
+        </b-col>
+        <b-col cols="8"></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -42,7 +82,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .conteudo-cadastro {
-  padding: 20px 80px 10px 80px;
+  padding: 20px 0px 10px 0px;
   background: url('../../assets/laptop-1512838.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,5 +100,40 @@ li {
 }
 a {
   color: #42b983;
+}
+.div-cadastro {
+  height: 480px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.header-form-cadastro {
+    margin-bottom: 50px;
+    padding-top: 35px;
+    border-bottom: 1px solid black;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.botao-cadastro {
+  font-weight: bold;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #57C6D4;
+  color: white;
+}
+.botao-cadastro:hover{
+  background-color: #3e9eab;
+}
+.input-group-text{
+  background-color: #57C6D4;
+  color: white;
+  border: none;
 }
 </style>

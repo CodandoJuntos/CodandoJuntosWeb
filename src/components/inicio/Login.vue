@@ -30,7 +30,7 @@
                             <b-input-group-prepend is-text>
                               <b-icon scale="2" icon="lock-fill"></b-icon>
                             </b-input-group-prepend>
-                            <b-form-input type="text" placeholder="Senha"></b-form-input>
+                            <b-form-input type="password" placeholder="Senha"></b-form-input>
                           </b-input-group>
                         </b-col>
                       </b-row>
@@ -70,7 +70,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .conteudo-login {
-  padding: 20px 80px 10px 80px;
+  padding: 20px 0px 10px 0px;
   background: url("../../assets/desk-3204896_1920.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,10 +124,5 @@ a {
   color: white;
   border: none;
 }
-@media only screen and (min-width: 768px) {
-  .conteudo-login{
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
+
 </style>

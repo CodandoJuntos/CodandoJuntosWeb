@@ -44,6 +44,8 @@ export default {
 .conteudo-cadastro {
   padding: 20px 80px 10px 80px;
   background: url('../../assets/laptop-1512838.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 h3 {
   margin: 40px 0 0;

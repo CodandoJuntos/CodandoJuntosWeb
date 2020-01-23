@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <meu-menu :rotas="routes"/>
-    <router-view></router-view>
+    <section class="main"> 
+      <router-view></router-view>
+    </section>
+    <footer-componente/>
   </div>
 </template>
 
@@ -9,11 +12,13 @@
 // import Inicio from './components/inicio/Inicio'
 import { routes } from './routes';
 import Menu from './components/shared/Menu.vue';
+import Footer from './components/shared/Footer.vue';
 
 export default {
   name: 'app',
   components: {
-    'meu-menu' : Menu
+    'meu-menu' : Menu,
+    'footer-componente': Footer
   },
   
   data() {
@@ -34,6 +39,10 @@ body{
 .pagina-enter, .pagina-leave-active {
 
   opacity: 0;
+}
+
+.main{
+  margin-bottom: 7em;
 }
 
 .pagina-enter-active, .pagina-leave-active {

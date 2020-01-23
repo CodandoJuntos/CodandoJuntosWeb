@@ -5,52 +5,8 @@
         <b-col cols="8"></b-col>
         <b-col cols="12" xl="4" lg="4" md="4" sm="12">
           <div class="div-login">
-            <b-container fluid="xl">
-              <b-row>
-                <b-col cols="12">
-                  <div class="header-form-login">
-                    <h4>VOCÊ JÁ POSSUI CADASTRO?</h4>
-                    <p>Preencha os dados para entrar.</p>
-                  </div>
-                  <div class="div-form-login">
-                    <form>
-                      <b-row>
-                        <b-col cols="12">
-                          <b-input-group size="lg" class="mb-3">
-                            <b-input-group-prepend is-text>
-                              <b-icon scale="2" icon="envelope-fill"></b-icon>
-                            </b-input-group-prepend>
-                            <b-form-input type="text" placeholder="E-mail"></b-form-input>
-                          </b-input-group>
-                        </b-col>
-                      </b-row>
-                      <b-row>
-                        <b-col cols="12">
-                          <b-input-group size="lg" class="mb-2">
-                            <b-input-group-prepend is-text>
-                              <b-icon scale="2" icon="lock-fill"></b-icon>
-                            </b-input-group-prepend>
-                            <b-form-input type="password" placeholder="Senha"></b-form-input>
-                          </b-input-group>
-                        </b-col>
-                      </b-row>
-                      <b-row>
-                        <b-col cols="12">
-                          <button class="botao-login">Entrar</button>
-                        </b-col>
-                      </b-row>
-                      <b-row>
-                        <b-col cols="12">
-                          <div class="text-center">
-                            <a href="#">Esqueci minha senha</a>
-                          </div>
-                        </b-col>
-                      </b-row>
-                    </form>
-                  </div>
-                </b-col>
-              </b-row>
-            </b-container>
+            <formulario-login  @clicked="onClickChild" v-if="exibir"/>
+            <formulario-redefinir-senha @clicked="onClickChild" v-else/>
           </div>
         </b-col>
       </b-row>
@@ -59,8 +15,27 @@
 </template>
 
 <script>
+import FormularioLogin from './forms/FormularioLogin';
+import FormularioRedefinirSenha from './forms/FormularioRedefinirSenha';
+
 export default {
-  name: "Login",
+  name: 'Login',
+  components: {
+    'formulario-login' : FormularioLogin,
+    'formulario-redefinir-senha': FormularioRedefinirSenha
+  },
+  data() {
+
+    return {
+      exibir: true,
+    }
+  },
+  methods: {
+
+    onClickChild(valor) {
+      this.exibir = valor;
+    }
+  },
   props: {
     msg: String
   }

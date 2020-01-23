@@ -64,7 +64,11 @@
             </b-container>
           </div>
         </b-col>
-        <b-col cols="8"></b-col>
+        <b-col cols="12" xl="8" lg="8" md="8" sm="12">
+          <b-card>
+            <h3>ENCONTRE UM PROJETO OPEN SOURCE COLABORE E ADQUIRA EXPERIÊNCIA</h3>
+          </b-card>
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -72,23 +76,20 @@
 
 <script>
 export default {
-  name: 'Cadastro',
+  name: "Cadastro",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .conteudo-cadastro {
   padding: 20px 0px 10px 0px;
-  background: url('../../assets/laptop-1512838.png');
+  background: url("../../assets/laptop-1512838.png");
   background-size: cover;
   background-repeat: no-repeat;
-}
-h3 {
-  margin: 40px 0 0;
 }
 ul {
   list-style-type: none;
@@ -110,12 +111,12 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .header-form-cadastro {
-    margin-bottom: 50px;
-    padding-top: 35px;
-    border-bottom: 1px solid black;
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    text-align: center;
+  margin-bottom: 50px;
+  padding-top: 35px;
+  border-bottom: 1px solid black;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  text-align: center;
 }
 .botao-cadastro {
   font-weight: bold;
@@ -125,14 +126,14 @@ a {
   height: 40px;
   border: none;
   border-radius: 4px;
-  background-color: #57C6D4;
+  background-color: #57c6d4;
   color: white;
 }
-.botao-cadastro:hover{
+.botao-cadastro:hover {
   background-color: #3e9eab;
 }
-.input-group-text{
-  background-color: #57C6D4;
+.input-group-text {
+  background-color: #57c6d4;
   color: white;
   border: none;
 }

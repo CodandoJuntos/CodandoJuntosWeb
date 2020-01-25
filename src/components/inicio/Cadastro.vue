@@ -66,7 +66,20 @@
         </b-col>
         <b-col cols="12" xl="8" lg="8" md="8" sm="12">
           <b-card>
-            <h3>ENCONTRE UM PROJETO OPEN SOURCE COLABORE E ADQUIRA EXPERIÊNCIA</h3>
+            <div class="div-titulo">
+              <h3>ENCONTRE UM PROJETO OPEN SOURCE COLABORE E ADQUIRA EXPERIÊNCIA</h3>
+            </div>
+            <div class="div-conteudo">
+              <p>
+                Acabou a faculdade quer ter um diferencial para o currículo, aqui você ajuda projetos Open Source e com isso
+                você pode dar aquela turbinada no currículo e ainda adquirir experiência em desenvolvimento de software.
+              </p>
+              <p>
+                Você que tem um projeto Open Source e deseja divulga-lo ou precisa de ajuda para mantê-lo,
+                aqui no
+                <b>CodandoJuntos</b> você pode!!
+              </p>
+            </div>
           </b-card>
         </b-col>
       </b-row>
@@ -136,5 +149,12 @@ a {
   background-color: #57c6d4;
   color: white;
   border: none;
+}
+.div-titulo {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.div-conteudo{
+  text-align: justify;
 }
 </style>

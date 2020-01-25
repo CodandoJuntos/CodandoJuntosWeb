@@ -2,13 +2,13 @@
   <b-container fluid="xl">
     <b-row>
       <b-col cols="12">
-        <div class="btn-voltar">
-          <b-btn variant="link" @click="onClickButton()" >
-            <b-icon font-scale="3" icon="arrow-left"></b-icon>
-          </b-btn>
-        </div>
         <div class="header-form-login">
-          <h4>REDEFINIR SENHA?</h4>
+          <div class="div-btn-voltar">
+            <b-btn class="btn-voltar" variant="link" @click="onClickButton()">
+              <b-icon font-scale="3" icon="arrow-left"></b-icon>
+            </b-btn>
+            <h4>REDEFINIR SENHA?</h4>
+          </div>
           <p>Preencha o campo e-mail para redefinir senha.</p>
         </div>
         <div class="div-form-login">
@@ -42,8 +42,8 @@ export default {
     msg: String
   },
   methods: {
-    onClickButton : function () {
-      this.$emit('clicked', true);
+    onClickButton: function() {
+      this.$emit("clicked", true);
     }
   }
 };
@@ -89,7 +89,15 @@ a {
   color: white;
   border: none;
 }
+.div-btn-voltar {
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
 .btn-voltar{
-    padding-top: 35px;
+    color:black;
+}
+.btn-voltar:hover{
+    color:#888;
 }
 </style>
